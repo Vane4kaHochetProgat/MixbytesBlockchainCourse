@@ -22,6 +22,7 @@ contract MultiSigWallet {
      *  Constants
      */
     uint constant public MAX_OWNER_COUNT = 50;
+    uint constant public MAX_TRANSACTION_VALUE = 66;
 
     /*
      *  Storage
@@ -84,7 +85,7 @@ contract MultiSigWallet {
     }
     
     modifier validTransactionValue(uint value) {
-         require(value <= 66);
+         require(value <= MAX_TRANSACTION_VALUE);
         _;
     }
 
