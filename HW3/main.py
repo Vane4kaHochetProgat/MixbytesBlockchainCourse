@@ -19,9 +19,6 @@ class Monitor:
         while True:
             for event in self.filter.get_new_entries():
                 json_event = json.loads(Web3.toJSON(event))
-                print(f"{self.name} CHANGE:\ncurrent value: {json_event['args']['current']}\ntime of change: "
-                      f"{str(datetime.fromtimestamp(float(json_event['args']['updatedAt'])))}\n"
-                      f"full json: {json_event}\n")
                 logging.warning(f"{self.name} CHANGE:\ncurrent value: {json_event['args']['current']}\ntime of change: "
                                 f"{str(datetime.fromtimestamp(float(json_event['args']['updatedAt'])))}\n"
                                 f"full json: {json_event}\n")
