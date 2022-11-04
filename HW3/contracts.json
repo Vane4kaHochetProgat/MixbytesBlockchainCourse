@@ -1,0 +1,13 @@
+{
+  "contracts": [
+    {
+      "ETH / USD": "0x37bC7498f4FF12C19678ee8fE19d713b87F6a9e6"
+    },
+    {
+      "LINK / ETH": "0xbba12740DE905707251525477bAD74985DeC46D2"
+    },
+    {
+      "USDT / ETH": "0x7De0d6fce0C128395C488cb4Df667cdbfb35d7DE"
+    }
+  ]
+}

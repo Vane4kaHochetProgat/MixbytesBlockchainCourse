@@ -76,3 +76,25 @@ bytes[32]). Простая отправка ETH в контракт запрещ
 Основный стэк проекта - солидити + python, однако, вполне возможно, он поменяется по мере погружения в тему (например, в зависимости от того, будет ли это телеграм-бот, сайт или приложение)
 
 В случае, если этот проект не покажется преподавателям курса достойным оценки, я планирую заняться аналитикой данных Ethereum.
+
+
+## HW 3. Blockchain software ecosystem
+
+Программа мониторит изменение курса валют оракулов
+
+Весь код находится в файле main.py, запустить его можно командой python3 main.py
+
+Контракты, с которыми работает код, указаны в файле contracts.json (На данный момент программа мониторит события изменения цен для пар: ETH / USD, LINK / ETH, USDT / ETH)
+
+Ссылка на alchemy-ноду должна находиться в файле websocket
+
+Abi контракта, с которым работает код, должно лежать в файле abi.json
+
+Пример вывода лога:
+
+```angular2html
+WARNING:root:USDT / ETH CHANGE:
+current value: 626562320587710
+time of change: 2022-11-04 15:41:23
+full json: {'args': {'current': 626562320587710, 'roundId': 8249, 'updatedAt': 1667565683}, 'event': 'AnswerUpdated', 'logIndex': 142, 'transactionIndex': 63, 'transactionHash': '0x8ae43fed89120a859acfe75c3dca4f45698139f70e8684fbe7a843fa062cc852', 'address': '0x7De0d6fce0C128395C488cb4Df667cdbfb35d7DE', 'blockHash': '0xb7add654371eb48939d94e261c37f50a3bc413aa7be3c86a5a14bf5c8ee52f5b', 'blockNumber': 15896716}
+```
