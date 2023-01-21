@@ -98,3 +98,27 @@ current value: 626562320587710
 time of change: 2022-11-04 15:41:23
 full json: {'args': {'current': 626562320587710, 'roundId': 8249, 'updatedAt': 1667565683}, 'event': 'AnswerUpdated', 'logIndex': 142, 'transactionIndex': 63, 'transactionHash': '0x8ae43fed89120a859acfe75c3dca4f45698139f70e8684fbe7a843fa062cc852', 'address': '0x7De0d6fce0C128395C488cb4Df667cdbfb35d7DE', 'blockHash': '0xb7add654371eb48939d94e261c37f50a3bc413aa7be3c86a5a14bf5c8ee52f5b', 'blockNumber': 15896716}
 ```
+
+
+##HW 7. Symmetric cryptography
+
+Программа генерирует распределение между студентами и билетами, на основе SipHash, используя parameter как сид 
+
+Запуск
+```angular2html
+python3 app.py <path to file> <number of tickets> <parametr>
+```
+
+Пример вывода
+```angular2html
+$ python3 app.py data.txt 40 90
+
+Иванов Иван Иванович 32
+Ярцев Ярослав Ярославович 30
+Петров Петр Петрович 34
+Жжж Михаил Владимирович 16
+Картер Жорж Николаевич 21
+Маркони Пьер Мустангович 4
+Пум Пурум Алексеевич 28
+Кириллов Яромир Трифанович 20
+```
