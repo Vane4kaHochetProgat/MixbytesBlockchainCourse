@@ -100,11 +100,11 @@ full json: {'args': {'current': 626562320587710, 'roundId': 8249, 'updatedAt': 1
 ```
 
 
-##HW 7. Symmetric cryptography
+## HW 7. Symmetric cryptography
 
 Программа генерирует распределение между студентами и билетами, на основе SipHash, используя parameter как сид 
 
-Запуск
+Запуск (из папки HW7)
 ```angular2html
 python3 app.py <path to file> <number of tickets> <parametr>
 ```
