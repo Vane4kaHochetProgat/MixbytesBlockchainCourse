@@ -99,6 +99,36 @@ time of change: 2022-11-04 15:41:23
 full json: {'args': {'current': 626562320587710, 'roundId': 8249, 'updatedAt': 1667565683}, 'event': 'AnswerUpdated', 'logIndex': 142, 'transactionIndex': 63, 'transactionHash': '0x8ae43fed89120a859acfe75c3dca4f45698139f70e8684fbe7a843fa062cc852', 'address': '0x7De0d6fce0C128395C488cb4Df667cdbfb35d7DE', 'blockHash': '0xb7add654371eb48939d94e261c37f50a3bc413aa7be3c86a5a14bf5c8ee52f5b', 'blockNumber': 15896716}
 ```
 
+## HW 4. Solidity + EVM, low-level patterns
+
+Программа создает и обменивает друг на друга два ERC20 токена в форме mainnet
+
+Запуск:
+```angular2html
+$cd HW4/hw4
+
+$ npm install
+
+$ export ALCHEMY_KEY=<ALCHEMY API KEY>
+
+$npx hardhat test
+```
+
+Пример вывода:
+
+```angular2html
+  Swap tokens
+After liquidity:
+ fistOwner's balance: 999949999 firstToken, 
+ secondOwner's balance: 999949999 secondToken
+firstOwner owns after swap 999949699 firstToken and 297 secondToken
+    ✔ Should be ended after swap deployment (18742ms)
+
+
+  1 passing (19s)
+
+```
+
 
 ## HW 7. Symmetric cryptography
 
