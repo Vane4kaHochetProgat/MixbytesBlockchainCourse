@@ -10,14 +10,6 @@ const PROVIDER_ADDRESS = "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5";
 const UNISWAP_V2_ROUTER_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
 
 
-const catchAndCheck = (catchValue: any) => {
-    return (value: bigint) => {
-        catchValue.result = value;
-        return true;
-    }
-}
-
-
 describe("DebtCollector", function () {
 
     const BORROWED_AMOUNT = ethers.utils.parseUnits("1000", "gwei");
@@ -45,5 +37,9 @@ describe("DebtCollector", function () {
         console.log(((balanceBefore.lte(balanceAfter)) ? "Win: %s gwei" : "Loss: %s gwei "), ((balanceBefore.sub(balanceAfter)).abs()).toString())
     });
 
-
+    const catchAndCheck = (catchValue: any) => {
+        return (value: bigint) => {
+            return value > 0;
+        }
+    }
 });
