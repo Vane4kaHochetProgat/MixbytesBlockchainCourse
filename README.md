@@ -129,6 +129,33 @@ firstOwner owns after swap 999949699 firstToken and 297 secondToken
 
 ```
 
+## HW 6. DeFI, protocols code review
+
+Запуск:
+```angular2html
+$cd HW6
+
+$ npm install
+
+$ export ALCHEMY_KEY=<ALCHEMY API KEY>
+
+$npx hardhat test
+```
+
+Пример вывода:
+
+```angular2html
+  DebtCollector
+Balance of our flashloan contract: 10000000000000000 gwei
+
+New balance of our flashloan contract: 9895759296710669 gwei
+
+Loss: 104240703289331 gwei
+✔ Credit and swap in limited time (3602ms)
+
+
+1 passing (4s)
+```
 
 ## HW 7. Symmetric cryptography
 
