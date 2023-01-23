@@ -12,8 +12,6 @@ const UNISWAP_V2_ROUTER_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
 
 describe("DebtCollector", function () {
 
-    const BORROWED_AMOUNT = ethers.utils.parseUnits("1000", "gwei");
-
     it("Credit and swap in limited time", async function () {
         const [WETHOwner] = await ethers.getSigners();
 
@@ -30,14 +28,14 @@ describe("DebtCollector", function () {
         const balanceBefore = await weth.balanceOf(DebtCollector.address)
         console.log("Balance of our flashloan contract: %s gwei \n", balanceBefore.toString())
 
-        await expect(DebtCollector.flashLending(ethers.utils.parseEther("0.01"))).to.emit(DebtCollector, "Logger").withArgs(catchAndCheck({result: 0}), catchAndCheck({result: 0}));
+        await expect(DebtCollector.flashLending(ethers.utils.parseEther("0.01"))).to.emit(DebtCollector, "Logger").withArgs(catchAndCheck(), catchAndCheck());
         const balanceAfter = await weth.balanceOf(DebtCollector.address)
         console.log("New balance of our flashloan contract: %s gwei \n", balanceAfter.toString())
 
         console.log(((balanceBefore.lte(balanceAfter)) ? "Win: %s gwei" : "Loss: %s gwei "), ((balanceBefore.sub(balanceAfter)).abs()).toString())
     });
 
-    const catchAndCheck = (catchValue: any) => {
+    const catchAndCheck = () => {
         return (value: bigint) => {
             return value > 0;
         }
