@@ -105,13 +105,13 @@ full json: {'args': {'current': 626562320587710, 'roundId': 8249, 'updatedAt': 1
 
 Запуск:
 ```angular2html
-$cd HW4/hw4
+$ cd HW4/hw4
 
 $ npm install
 
 $ export ALCHEMY_KEY=<ALCHEMY API KEY>
 
-$npx hardhat test
+$ npx hardhat test
 ```
 
 Пример вывода:
@@ -128,6 +128,45 @@ firstOwner owns after swap 999949699 firstToken and 297 secondToken
   1 passing (19s)
 
 ```
+
+## HW 5. Solidity, typical patterns
+
+Это простой проект, использующий Dao. Голосование между тремя пользователя осуществляется с помощью контракта MyFirstDao. Участники изъявляют свою волю, голосуя с помощью MyToken
+
+Присутствует минимальное покрытие тестами
+
+Запуск
+```angular2html
+$ cd HW5
+
+$ npm install
+
+$ export ALCHEMY_KEY=<ALCHEMY API KEY>
+
+$ npx hardhat test
+```
+
+Пример вывода
+```angular2html
+ Deployment
+    ✔ Balances match up (4253ms)
+    ✔ Can create proposal
+    ✔ Can't create same proposal for second time
+
+  Vote
+    ✔ Should be able to vote (91ms)
+    ✔ Can't vote in non-existing proposal
+    ✔ Can't vote with money bigger than balance
+
+  Vote result
+    ✔ Right result is reject (79ms)
+    ✔ Right result is accept (91ms)
+
+
+  8 passing (5s)
+```
+
+
 
 ## HW 6. DeFI, protocols code review
 
